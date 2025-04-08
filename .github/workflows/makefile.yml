@@ -219,6 +219,8 @@ jobs:
           
           # Remove check_defconfig
           sed -i 's/check_defconfig//' ./common/build.config.gki
+          sed -i '2s/check_defconfig//' ./common/build.config.gki
+          sed -i '2s/check defconfig//' ./common/ build.config.gki >> ./common/arch/arm64/ configs/gki_defconfig
 
       - name: Add make name
         run: |
